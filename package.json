@@ -17,7 +17,8 @@
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec",
+    "test:basic": "stencil test --spec src/components/my-component/tests/basic.spec.ts",
+    "test:using-template": "stencil test --spec src/components/my-component/tests/using-template.spec.tsx",
     "test:watch": "stencil test --spec --watchAll",
     "generate": "stencil generate"
   },
