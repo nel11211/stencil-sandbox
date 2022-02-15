@@ -9,7 +9,7 @@ describe("MyComponent", () => {
     // Setup pre-conditions
     const page = await newSpecPage({
       components: [MyComponent],
-      template: () => <my-component stats={[1, 2, 3]}></my-component>,
+      template: () => <my-component stats={[1, 2, 3]}></my-component>
     });
     const element = page.root as HTMLMyComponentElement;
 
@@ -26,7 +26,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
 
@@ -42,7 +42,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
 
@@ -64,7 +64,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
         const element = page.root as HTMLMyComponentElement;
@@ -84,7 +84,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
 
@@ -107,7 +107,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
 
@@ -122,7 +122,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
         const element = page.root as HTMLMyComponentElement;
@@ -148,7 +148,7 @@ describe("MyComponent", () => {
         // Setup pre-conditions
         const page = await newSpecPage({
           components: [MyComponent],
-          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+          template: () => <my-component stats={[1, 2, 3]}></my-component>
         });
         const component = page.rootInstance as MyComponent;
         const element = page.root as HTMLMyComponentElement;

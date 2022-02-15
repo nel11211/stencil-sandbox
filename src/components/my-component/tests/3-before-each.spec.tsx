@@ -11,7 +11,7 @@ describe("MyComponent", () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [MyComponent],
-      template: () => <my-component stats={[1, 2, 3]}></my-component>,
+      template: () => <my-component stats={[1, 2, 3]}></my-component>
     });
     component = page.rootInstance as MyComponent;
     element = page.root as HTMLMyComponentElement;
