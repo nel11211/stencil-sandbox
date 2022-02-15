@@ -95,8 +95,8 @@ describe("MyComponent", () => {
         const text = component["getText"](); 
 
         // Test post-conditions
-        expect(text).toBe("Valued Customer");
         expect(mockGetDefaultText).toHaveBeenCalled();
+        expect(text).toBe("Valued Customer");
       });
 
     });
@@ -135,6 +135,33 @@ describe("MyComponent", () => {
         // Test post-conditions
         expect(sum).toBe(15);
       })
+
+    });
+
+  });
+
+  describe("Public methods", () => {
+
+    describe("componentWillLoad()", () => {
+
+      it("should set this.sum using getSum()", async () => {
+        // Setup pre-conditions
+        const page = await newSpecPage({
+          components: [MyComponent],
+          template: () => <my-component stats={[1, 2, 3]}></my-component>,
+        });
+        const component = page.rootInstance as MyComponent;
+        const element = page.root as HTMLMyComponentElement;
+        expect(component["sum"]).toBe(6);
+
+        element.stats = [4, 5, 6];
+
+        // Call method
+        component.componentWillLoad();
+
+        // Test post-conditions
+        expect(component["sum"]).toBe(15);
+      });
 
     });
 
