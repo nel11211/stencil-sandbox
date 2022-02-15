@@ -32,7 +32,8 @@ describe("MyComponent", () => {
         element.stats = [1, 2, 3];
 
         // Call method
-        const text = component["getDefaultText"]();
+        const text = component["getDefaultText"](); 
+        // const text = (component as any).getDefaultText();
 
         // Test post-conditions
         expect(text).toBe("Valued Customer");
