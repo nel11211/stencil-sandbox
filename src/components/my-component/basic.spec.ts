@@ -10,4 +10,12 @@ describe('MyComponent', () => {
     });
     expect(page.root).toBeTruthy();
   });
+
+  it('should render my component', async () => {
+    const page = await newSpecPage({
+      components: [MyComponent],
+      html: `<my-component></my-component>`,
+    });
+    expect(page.root).toBeTruthy();
+  });
 });

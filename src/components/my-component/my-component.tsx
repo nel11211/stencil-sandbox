@@ -26,6 +26,12 @@ export class MyComponent {
   @Prop() last?: string;
 
   /**
+   * Statistics
+   * @category Public
+   */
+  @Prop() stats: number[];
+
+  /**
    * @category Private
    */
   private defaultFirst = "Valued";
@@ -33,12 +39,17 @@ export class MyComponent {
   /**
    * @category Private
    */
-   private defaultMiddle = "";
+  private defaultMiddle = "";
 
   /**
    * @category Private
    */
-   private defaultLast = "Customer";
+  private defaultLast = "Customer";
+
+  /**
+   * @category Private
+   */
+  private sum: number;
 
   /**
    * Returns default text.
@@ -61,6 +72,26 @@ export class MyComponent {
   }
 
   /**
+   * Returns sum of stats.
+   * @category Private
+   */
+  private getSum(): number {
+    let sum = 0;
+    for (const value of this.stats) {
+      sum += value;
+    }
+    return sum;
+  }
+
+  /**
+   * Stencil componentWillLoad method.
+   * @category Lifecycle
+   */
+  public componentWillRender() {
+    this.sum = this.getSum();
+  }
+
+  /**
    * Stencil render method.
    * @category Lifecycle
    */
@@ -68,6 +99,7 @@ export class MyComponent {
     return (
       <div>
         <div>{`Hello, ${this.getText()}!`}</div>
+        <div>{`Sum of stats: ${this.sum}`}</div>
       </div>
     );
   }
