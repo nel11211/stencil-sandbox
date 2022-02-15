@@ -87,7 +87,7 @@ export class MyComponent {
    * Stencil componentWillLoad method.
    * @category Lifecycle
    */
-  public componentWillRender() {
+  public componentWillLoad() {
     this.sum = this.getSum();
   }
 
