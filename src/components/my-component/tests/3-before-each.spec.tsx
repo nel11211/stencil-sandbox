@@ -7,6 +7,7 @@ describe("MyComponent", () => {
   let component: MyComponent;
   let element: HTMLMyComponentElement;
 
+  // Runs before each test case
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [MyComponent],
