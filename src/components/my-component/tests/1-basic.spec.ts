@@ -11,7 +11,7 @@ describe("MyComponent", () => {
       html: `<my-component></my-component>`,
     });
     const element = page.root as HTMLMyComponentElement;
-
+    element.stats = [1, 2, 3];
 
     // Test post-conditions
     expect(element).toBeTruthy();
